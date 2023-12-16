@@ -1,0 +1,131 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+ nav {
+  position: fixed;
+  background: rgba(255, 252, 252, 0.6);
+  padding: 0 20px;
+  z-index: 999;
+
+ }
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 350px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+.hero {
+  background-size: cover;
+  width: 100%;
+  min-height: 700px;
+
+}
+
+nav li a:hover{
+  background: #fff;
+}
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 1px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+.size{
+  width: 80px;
+}
+.navtxt{
+  text-align: center;
+}
+.hero-container {
+overflow: hidden;
+height: 630px;
+}
+
+.backx {
+background-color: #ebf1f4;;
+}
+.centered {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+.logo{
+  width: 85px;
+}
+ 
+ #topText {
+   color: white;
+   font-size: 20px;
+   align-self: center;
+ }
+
+ /* #video {
+  position: absolute;
+ } */
+
+ .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color:  rgba(0, 0, 0, 0.2);
+  bottom: 12%;
+  left: 0;
+ }
+
+ .inner {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family:Georgia, 'Times New Roman', Times, serif;
+ }
+
+ h2 {
+  color: #fff;
+  font-weight: 900;
+ }

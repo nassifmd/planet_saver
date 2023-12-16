@@ -25,7 +25,7 @@ Version 5.0
 
 ## Authors
 
-  - **Nassif Dauda** - *Provided README Template* -
+  - **Nassif Dauda** - 
     [LinkedIn](https://www.linkedin.com/in/nassif-dauda/)
 
 

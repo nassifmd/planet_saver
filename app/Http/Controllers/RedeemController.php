@@ -16,19 +16,11 @@ class RedeemController extends Controller
 {
      public function showRedemptionForm()
     {
-        // Retrieve the authenticated user
         $user = Auth::user();
 
-        if (!$user) {
-            // Handle the case where the user is not authenticated
-            // You can redirect them to the login page or perform any other desired action
-        }
-
-        // Replace this code with your own logic to determine the top player ID
         $topPlayer = User::orderBy('score', 'desc')->first();
         $topPlayerId = $topPlayer->id;
 
-        // Retrieve the top player
         $topPlayer = User::find($topPlayerId);
 
         // Check if the top player is eligible to redeem a tree
@@ -48,53 +40,35 @@ class RedeemController extends Controller
 
     public function redeemTree(Request $request, $topPlayerId)
     {
-        // Retrieve the authenticated user
         $user = Auth::user();
-    
-        if (!$user) {
-            // Handle the case where the user is not authenticated
-            // You can redirect them to the login page or perform any other desired action
-        }
 
-        // Retrieve the selected tree ID from the form submission
     $selectedTreeId = $request->input('tree_id');
 
-   // Retrieve the selected tree ID from the form submission
    $selectedTreeId = $request->input('tree_id');
 
-    // Retrieve the top player
     $topPlayer = User::find($topPlayerId);
 
     if (!$topPlayer) {
         return redirect()->route('dashboard')->with('error', 'Top player not found.');
     }
 
-    // Check if the top player is eligible to redeem a tree
     if (!$this->isEligibleForRedemption($topPlayer)) {
         return redirect()->route('dashboard')->with('error', 'Sorry, you are not eligible to redeem a tree at this time.');
     }
 
-    // Retrieve the selected tree based on the ID
     $selectedTree = Tree::find($selectedTreeId);
 
     if (!$selectedTree) {
         return redirect()->route('dashboard')->with('error', 'Selected tree not found.');
     }
 
-    // Perform any validation or additional logic here
-    // ...
-
-    // Update the top player's redeemed tree
     $topPlayer->redeemed_tree_id = $selectedTreeId;
     $topPlayer->save();
 
-    // Send an email to the user
     $this->sendRedemptionEmail($topPlayer, $selectedTree);
 
-    // Set a success message to be displayed on the form
     $redeemedResponse = 'Congratulations! You have successfully redeemed your tree for planting.';
 
-    // Redirect back to the form with the success message
     return redirect()->route('redeem.tree')->with('success', $redeemedResponse);
     }
     

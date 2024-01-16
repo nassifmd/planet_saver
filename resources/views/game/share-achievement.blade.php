@@ -191,7 +191,6 @@
 
         </div>
 
-        <!-- Download Certificate button -->
         <div class="download-section">
             <p>Download your certificate:</p>
             <a href="{{ route('game.download-certificate') }}">Download</a>
@@ -211,30 +210,23 @@
     function shareFacebook(event) {
   event.preventDefault();
 
-  // Capture the certificate as an image using html2canvas
   html2canvas(document.querySelector(".certificate")).then(function (canvas) {
-    // Convert the canvas to a data URL
+
     var certificateData = canvas.toDataURL("image/jpeg");
 
-    // Create a thumbnail canvas
     var thumbnailCanvas = document.createElement("canvas");
     var thumbnailContext = thumbnailCanvas.getContext("2d");
 
-    // Calculate the thumbnail width and height
-    var thumbnailWidth = 200; // Adjust the width as desired
+    var thumbnailWidth = 200; 
     var thumbnailHeight = (canvas.height * thumbnailWidth) / canvas.width;
 
-    // Set the thumbnail canvas dimensions
     thumbnailCanvas.width = thumbnailWidth;
     thumbnailCanvas.height = thumbnailHeight;
 
-    // Draw the certificate image onto the thumbnail canvas
     thumbnailContext.drawImage(canvas, 0, 0, thumbnailWidth, thumbnailHeight);
 
-    // Convert the thumbnail canvas to a data URL
     var thumbnailData = thumbnailCanvas.toDataURL("image/jpeg");
 
-    // Share the certificate and thumbnail on Facebook
     FB.ui(
       {
         method: "share",

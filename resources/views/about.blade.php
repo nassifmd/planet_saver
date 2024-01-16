@@ -26,31 +26,30 @@
         <div class="container">
             <div class="section">
 
-                <!--   Icon Section   -->
                 <div class="row">
                 <div class="col s12 m8">
                     <div class="slider">
                         <ul class="slides">
                         <li>
-                            <img src="img/agric4.jpg"> <!-- random image -->
+                            <img src="img/agric4.jpg"> 
                             <div class="caption center-align">
                             <h3>Farmers at the forefront of Climate Action</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="img/agric16.jpg"> <!-- random image -->
+                            <img src="img/agric16.jpg"> 
                             <div class="caption left-align">
                             <h3>Farmers at the forefront of Climate Action</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="img/agric22.jpg"> <!-- random image -->
+                            <img src="img/agric22.jpg"> 
                             <div class="caption right-align">
                             <h3>Farmers at the forefront of Climate Action</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="img/agric9.jpg"> <!-- random image -->
+                            <img src="img/agric9.jpg"> 
                             <div class="caption center-align">
                             <h3>Farmers at the forefront of Climate Action</h3>
                             </div>
@@ -78,7 +77,6 @@
         <div class="container">
             <div class="section">
 
-                <!--   Icon Section   -->
                 <div class="row">
                     <div class="col s12 m4">
                         <div class="card-panel teal">
@@ -111,43 +109,42 @@
         <div class="container">
             <div class="section">
 
-                <!--   Icon Section   -->
                 <div class="row">
                 <div class="col s12 m8">
                     <div class="slider">
                         <ul class="slides">
                         <li>
-                            <img src="img/b11.jpg"> <!-- random image -->
+                            <img src="img/b11.jpg"> 
                             <div class="caption center-align">
                             <h3>Marketing For Smallholder Farmers</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="img/agric1.jpg"> <!-- random image -->
+                            <img src="img/agric1.jpg"> 
                             <div class="caption left-align">
                             <h3>100 arcs of maize cultivation</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="img/agric19.jpg"> <!-- random image -->
+                            <img src="img/agric19.jpg"> 
                             <div class="caption right-align">
                             <h3>Climate-Smart Curriculum Development</h3>
                             </div>
                         </li>
                         <li>
-                            <img src="img/gycc1.jpeg"> <!-- random image -->
+                            <img src="img/gycc1.jpeg"> 
                             <div class="caption center-align">
                             <h3>Green Initiative Tour</h3>
                             </div>
                         </li>
                         <li>
-                          <img src="img/gycc4.jpeg"> <!-- random image -->
+                          <img src="img/gycc4.jpeg"> 
                           <div class="caption center-align">
                           <h3>Power Shift</h3>
                           </div>
                       </li>
                       <li>
-                        <img src="img/gycc2.jpeg"> <!-- random image -->
+                        <img src="img/gycc2.jpeg"> 
                         <div class="caption center-align">
                         <h3>Aboabo Zero Waste</h3>
                         </div>

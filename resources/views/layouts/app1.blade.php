@@ -11,7 +11,6 @@
   <link href="{{ asset('fontawesome/css/brands.css')}}" rel="stylesheet">
   <link href="{{ asset('fontawesome/css/solid.css')}}" rel="stylesheet">
   <link href="{{ asset('css/materialize.css') }}" type="text/css" rel="stylesheet" media="screen,projection"/>
-  <!-- <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/> -->
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
 </head>

@@ -4,7 +4,6 @@
 <head>
     <title>Crop Disease Identification</title>
     <style>
-        /* CSS styling for the form */
         .form-container {
             max-width: 500px;
             margin: 0 auto;
@@ -31,7 +30,6 @@
     </div>
 
     <script>
-        // JavaScript code to handle form submission and display results
         document.getElementById('cropForm').addEventListener('submit', function(e) {
             e.preventDefault();
             var formData = new FormData();

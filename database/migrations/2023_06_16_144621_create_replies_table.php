@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('replies', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('post_id'); // Foreign key to reference posts table
+            $table->unsignedBigInteger('post_id');
             $table->text('content');
             $table->string('posted_by');
             $table->timestamps();

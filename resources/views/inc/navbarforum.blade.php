@@ -9,7 +9,7 @@
     <ul id="nav-mobile" class="right hide-on-med-and-down">
 		<li><a class="new-blue-text" style="font-weight: 800;" href="{{ url('indexpost')}}">Posts</a></li>
 	    <li><a class="new-blue-text" style="font-weight: 800;" href="{{ url('create')}}">Create</a></li>
-      <!-- LogIn and Register -->
+
       @if (Route::has('login'))
 						@auth
 							<li><a href="{{ url('/dashboard') }}" class="waves-effect waves-light btn blue darken-1">Dashboard</a></li>
@@ -22,17 +22,17 @@
 						@endauth
 
 					@endif
-<!-- LogIn and Register End -->
+
     </ul>
   </div>
 
 </nav>
 
-<!-- Sidenav -->
+
 <ul class="sidenav" id="mobile-links">
   <ul><li><a href="#"><img class="responsive-img size" src="./img/logo.png"></a></li></ul>
     <li><a class="navtxt" href="{{ url('forum.create')}}">Create</a></li>
-    <!-- LogIn and Register -->
+
     @if (Route::has('login'))
 						@auth
 							<li><a href="{{ url('/dashboard') }}" class="waves-effect waves-light btn blue darken-1">Dashboard</a></li>
@@ -45,5 +45,5 @@
 						@endauth
 
 					@endif
-<!-- LogIn and Register End -->
+
 </ul>

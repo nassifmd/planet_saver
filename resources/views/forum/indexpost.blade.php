@@ -53,8 +53,6 @@
     var instances = M.Parallax.init(elems, options);
   });
 
-  // Or with jQuery
-
   $(document).ready(function(){
     $('.parallax').parallax();
   });

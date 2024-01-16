@@ -3,7 +3,7 @@
 <head>
     <title>Printable Certificate</title>
     <style>
-        /* Styles for the certificate section */
+
         .certificate {
             width: 600px;
             height: auto;
@@ -75,8 +75,7 @@
         .name {
     font-family: cursive;
 }
-        
-        /* Hide everything else on the page for printing */
+
         @media print {
             body * {
                 display: none;

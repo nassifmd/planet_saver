@@ -9,7 +9,6 @@
                 @csrf
                 @method('PATCH')
 
-                <!-- Update post content -->
                 <textarea name="content" rows="4" placeholder="Edit post content" class="reply-textarea">{{ $post->content }}</textarea>
                 <button type="submit" class="btn btn-danger">Update Post</button>
             </form>

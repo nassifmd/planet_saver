@@ -110,9 +110,9 @@
     <div class="container">
         <div class="form-container">
             <h1>Climate Quiz Game</h1>
-            <!-- Add these lines below the <h1> tag -->
+
             <p>Questions Left: {{ $unansweredQuestionCount }} out of {{ $questionCount }}</p>
-            <!-- Display the notification with appropriate color -->
+
             @if (session('notification'))
                 <div class="notification {{ session('isCorrect') ? 'correct' : 'wrong' }}">
                     {{ session('notification') }}

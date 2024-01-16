@@ -1137,7 +1137,6 @@ class QuestionSeeder extends Seeder
             $question->save();
         }
         
-       // Note: This code assumes that you have the `Question` model defined with the appropriate properties and database table. Adjust the code accordingly if needed.
         
     }
 }

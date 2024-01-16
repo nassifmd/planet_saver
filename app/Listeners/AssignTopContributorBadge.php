@@ -20,15 +20,13 @@ class AssignTopContributorBadge implements ShouldQueue
     {
         $user = $event->user;
 
-        // Determine the criteria to assign the top contributor badge
-        $postCountThreshold = 10; // Example threshold - modify according to your criteria
+        $postCountThreshold = 10;
 
-        // Retrieve the number of posts made by the user
         $postCount = $user->posts()->count();
 
         // Check if the user meets the criteria to be a top contributor
         if ($postCount >= $postCountThreshold) {
-            // Retrieve the top contributor badge
+
             $badge = Badge::where('name', 'Top Contributor')->first();
 
             // Assign the badge to the user

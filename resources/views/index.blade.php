@@ -20,11 +20,9 @@
   <div class="container">
     <div class="section">
 
-      <!--   Icon Section   -->
       <div class="row">
         <div class="col s12 m6">
           <div class="icon-block ">
-            <!-- <h2 class="brown-text"><i class="material-icons">flash_on</i></h2> -->
             <h2 class="new-blue-text" style="margin-top: 100px; ">Our Work</h2>
 
               <p class="new-blue-text">Founded in 2016, AgricConnect International is a social venture working to eradicate poverty and improve food security by leveraging technology to connect smallholder farmers to ready markets while promoting climate-smart and sustainable agriculture. Our international agri-business community and platform supports rural and agri-market development in Ghana and beyond. 
@@ -78,9 +76,6 @@
             <div class="card-image">
               <img src="./img/13.PNG">
             </div>
-            <!-- <div class="card-action">
-              <a href="#">Climate Action</a>
-            </div> -->
           </div>
         </div>
 
@@ -89,9 +84,6 @@
             <div class="card-image">
               <img src="./img/1.PNG">
             </div>
-            <!-- <div class="card-action">
-              <a href="#">No poverty</a>
-            </div> -->
           </div>
         </div>
 
@@ -100,9 +92,6 @@
             <div class="card-image">
               <img src="./img/2.PNG">
             </div>
-            <!-- <div class="card-action">
-              <a href="#">Zero Hunger</a>
-            </div> -->
           </div>
         </div>
 
@@ -111,9 +100,6 @@
             <div class="card-image">
               <img src="./img/5.png">
             </div>
-            <!-- <div class="card-action">
-              <a href="#">Gender Equality</a>
-            </div> -->
           </div>
         </div>
       </div>
@@ -126,27 +112,25 @@
     <div class="container">
       <div class="section">
   
-        <!--   Icon Section   -->
         <div class="row" style="margin-top: 50px; margin-bottom: 100px;">
           <div class="col s12 m12">
             <div class="icon-block">
               <h2 class="new-blue-text" style="margin-bottom: 100px;">Our partners</h2>
-              <!-- <a class="waves-effect waves-light btn">Meet our clients</a> -->
   
              <div class="row">
                 <div class="col s6 m4">
                       <div class="col s12 m4">
-                        <img src="./img/p.jpg" alt="peterpan" class="circle responsive-img"> <!-- notice the "circle" class -->
+                        <img src="./img/p.jpg" alt="peterpan" class="circle responsive-img"> 
                       </div>
                 </div>
                 <div class="col s6 m4">
                   <div class="col s12 m4">
-                    <img src="./img/sweet roses.jpg" alt="sweet roses" class="circle responsive-img"> <!-- notice the "circle" class -->
+                    <img src="./img/sweet roses.jpg" alt="sweet roses" class="circle responsive-img"> 
                   </div>
                 </div>
                 <div class="col s6 m4">
                   <div class="col s12 m4">
-                    <img src="./img/eu.png" alt="eu" class="circle responsive-img"> <!-- notice the "circle" class -->
+                    <img src="./img/eu.png" alt="eu" class="circle responsive-img">
                   </div>
                 </div>
              </div>
@@ -173,7 +157,6 @@
             </div>
             <div class="card-image">
               <img src="./img/8reason.jpg">
-              <!-- <span class="card-title">8 REASONS WHY YOU SHOULD ADD MORE FRUITS AND VEGETABLES TO YOUR DIET</span> -->
             </div>
           </div>
         </div>
@@ -188,7 +171,6 @@
             </div>
             <div class="card-image">
               <img src="./img/combat.jpg">
-              <!-- <span class="card-title">COMBATING PESTS AND DISEASES WITH THE LAW</span> -->
             </div>
           </div>
         </div>
@@ -203,7 +185,6 @@
             </div>
             <div class="card-image">
               <img src="./img/neg.jpg">
-              <!-- <span class="card-title">AGRICULTURE IN GHANA; THE NEGLECTED GREEN GOLD</span> -->
             </div>
           </div>
         </div>
@@ -217,7 +198,6 @@
     <div class="container">
       <div class="section">
   
-        <!--   Icon Section   -->
         <div class="row" style="margin-top: 50px; margin-bottom: 100px;">
           <div class="col s12 m12">
             <div class="icon-block">

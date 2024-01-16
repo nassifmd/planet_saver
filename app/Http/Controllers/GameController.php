@@ -24,9 +24,9 @@ class GameController extends Controller
     {
         $answeredQuestions = Session::get('answered_questions', []);
 
-        $questionCount = Question::count(); // Get the total number of questions in the database
+        $questionCount = Question::count(); 
 
-        $unansweredQuestionCount = $questionCount - count($answeredQuestions); // Calculate the number of unanswered questions
+        $unansweredQuestionCount = $questionCount - count($answeredQuestions); 
 
         $question = Question::whereNotIn('id', $answeredQuestions)->inRandomOrder()->first();
 
@@ -81,14 +81,14 @@ class GameController extends Controller
         $score = $user->score;
         $rank = User::where('score', '>', $score)->count();
 
-        // Clear the user's score and answer statistics
+        // Clear the user's score
         $user->update([
             'score' => 0,
             'correct_answers' => 0,
             'wrong_answers' => 0,
         ]);
 
-        // Get the rank of the authenticated user
+        //rank of the authenticated user
         $rank = User::where('score', '>', $score)->count();
 
         // Clear the answered questions from the session
@@ -107,7 +107,6 @@ class GameController extends Controller
         $user->score = 0;
         $user->save();
 
-        // Clear the answered questions from the session
         Session::forget('answered_questions');
 
         return redirect()->route('game.index');
@@ -125,28 +124,21 @@ class GameController extends Controller
         $rank = $users->search(function ($item) use ($user) {
             return $item->id === $user->id;
         });
-    
-        // Generate the certificate image using Intervention Image library
+
         $certificate = Image::make(public_path('path/to/template/certificate_template.jpg'));
     
-        // Customize the certificate with user's name, score, and rank
-        $certificate->text($user->name, x, y, function ($font) {
-            // Configure font properties (size, color, etc.)
-        });
+        // $certificate->text($user->name, x, y, function ($font) {
+        // });
     
-        $certificate->text($score, x, y, function ($font) {
-            // Configure font properties
-        });
+        // $certificate->text($score, x, y, function ($font) {
+        // });
     
-        $certificate->text($rank + 1, x, y, function ($font) {
-            // Configure font properties
-        });
-    
-        // Save the customized certificate as a JPG file
+        // $certificate->text($rank + 1, x, y, function ($font) {
+        // });
+
         $certificatePath = public_path('path/to/save/certificates/') . $user->id . '.jpg';
         $certificate->save($certificatePath);
     
-        // Download the certificate file
         return response()->download($certificatePath)->deleteFileAfterSend(true);
     }
 
@@ -155,25 +147,18 @@ class GameController extends Controller
         $user = auth()->user();
         $score = $user->score;
 
-        // Retrieve all users sorted by score
         $users = User::orderByDesc('score')->get();
 
-        // Calculate the user's rank
         $rank = $users->search(function ($item) use ($user) {
             return $item->id === $user->id;
         });
 
-        // Generate the certificate PDF using Dompdf or SnappyPdf
-        // Replace the placeholder variables with the actual user's data
         $certificateHtml = view('game.certificate-pdf', compact('user', 'score', 'rank'))->render();
 
-        // Generate the PDF file using Dompdf or SnappyPdf
-        $pdf = \PDF::loadHTML($certificateHtml); // Replace with your PDF generation library
+        $pdf = \PDF::loadHTML($certificateHtml);
 
-        // Set the file name for the downloaded PDF
         $fileName = 'Certificate of Achievement - ' . $user->name . '.pdf';
 
-        // Download the PDF file
         return $pdf->download($fileName);
     }
 

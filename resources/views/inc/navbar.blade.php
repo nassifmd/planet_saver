@@ -12,7 +12,7 @@
       <li><a class="new-blue-text" style="font-weight: 800;" href="{{ url('product')}}">Products</a></li>
       <li><a class="new-blue-text" style="font-weight: 800;" href="{{ url('project')}}">Projects</a></li>
       <li><a class="new-blue-text" style="font-weight: 800;" href="{{ url('contact')}}">Contact</a></li>
-      <!-- LogIn and Register -->
+
       @if (Route::has('login'))
 						@auth
 							<li><a href="{{ url('/dashboard') }}" class="waves-effect waves-light btn blue darken-1">Dashboard</a></li>
@@ -25,13 +25,12 @@
 						@endauth
 
 					@endif
-<!-- LogIn and Register End -->
+
     </ul>
   </div>
 
 </nav>
 
-<!-- Sidenav -->
 <ul class="sidenav" id="mobile-links">
   <ul><li><a href="#"><img class="responsive-img size" src="./img/logo.png"></a></li></ul>
     <li><a class="navtxt" href="{{ url('index')}}">Home</a></li>
@@ -39,7 +38,7 @@
     <li><a class="navtxt" href="{{ url('product')}}">Products</a></li>
     <li><a class="navtxt" href="{{ url('project')}}">Projects</a></li>
     <li><a class="navtxt" href="{{ url('contact')}}">Contact</a></li>
-    <!-- LogIn and Register -->
+
     @if (Route::has('login'))
 						@auth
 							<li><a href="{{ url('/dashboard') }}" class="waves-effect waves-light btn blue darken-1">Dashboard</a></li>
@@ -52,5 +51,5 @@
 						@endauth
 
 					@endif
-<!-- LogIn and Register End -->
+
 </ul>

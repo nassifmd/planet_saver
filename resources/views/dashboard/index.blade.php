@@ -8,7 +8,7 @@
             background-size: cover;
             color: green;
             font-size: 20px;
-            overflow-y: auto; /* Enable vertical scrolling */
+            overflow-y: auto; 
         }
 
         .container {
@@ -17,15 +17,15 @@
             align-items: center;
             min-height: 100vh;
             opacity: 0.8;
-            overflow: auto; /* Enable scrolling within the container */
+            overflow: auto; 
         }
 
         .form-container {
             background-color: #fff;
             padding: 20px;
             border-radius: 5px;
-            max-width: 600px; /* Limit the width of the container */
-            margin: 0 auto; /* Center the container horizontally */
+            max-width: 600px; 
+            margin: 0 auto; 
         }
 
         table {
@@ -45,7 +45,7 @@
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
-            margin-top: 20%; /* Added margin */
+            margin-top: 20%;
         }
 
         h1 {
@@ -113,7 +113,7 @@
             margin-top: 10px;
         }
         .play-again-button {
-            /* Your existing button styles */
+
             margin-top: 50px;
         }
         .user-position {
@@ -147,7 +147,6 @@
 
             <h1 id='dashboard'>Climate Game Dashboard</h1>
 
-            <!-- Button to show game instructions -->
         <button id="instructions-btn">Game Instructions</button>
 
             <!-- Game instructions pop-up -->
@@ -185,10 +184,8 @@
                 @endforeach
             </ul>
 
-            <!-- Add this line to display the redeemed tree count -->
             <p>Redeemed Trees: {{ $redeemedTreesCount }}</p>
-
-            <!-- Add a link to the redemption form for the top player -->
+ 
             @if (isset($user) && $user->id === $topPlayerId)
                 <a href="{{ route('redeem.tree') }}">Redeem a Tree</a>
             @endif
@@ -197,7 +194,6 @@
                 <p>Your Position: {{ $rank !== false ? $rank + 1 : 'N/A' }}</p>
             </div>
 
-            <!-- Add this button/link in the appropriate location within the form-container -->
             <a href="#" id="invite-btn" class="btn">Invite Friends</a>
 
             <h2>Leaderboard:</h2>
@@ -240,31 +236,24 @@
     </div>
 
     <script>
-        // game-instructions.js
 
-// Function to show the game instructions pop-up
 function showGameInstructions() {
     var instructionsPopup = document.getElementById('instructions-popup');
     instructionsPopup.style.display = 'block';
 }
 
-// Function to hide the game instructions pop-up
 function hideGameInstructions() {
     var instructionsPopup = document.getElementById('instructions-popup');
     instructionsPopup.style.display = 'none';
 }
 
-// Add event listener to the instructions button
 var instructionsBtn = document.getElementById('instructions-btn');
 instructionsBtn.addEventListener('click', showGameInstructions);
 
-// Add event listener to the close button of the instructions pop-up
 var closeBtn = document.getElementById('close-btn');
 closeBtn.addEventListener('click', hideGameInstructions);
 
-// Function to handle the invitation action
 function inviteFriends() {
-    // Implement the logic to invite friends here
     if (navigator.share) {
     navigator.share({
       title: 'Join me for the Climate Quiz Game!',
@@ -274,26 +263,21 @@ function inviteFriends() {
       .then(() => console.log('Share successful'))
       .catch((error) => console.log('Error sharing:', error));
   }
-    // You can use methods like window.open, a share API, or a custom implementation
-    // For example, you can open a mail client with a pre-filled invitation email:
     window.open('mailto:?subject=Join me for the Climate Quiz Game!&body=Hey, let\'s play the Climate Quiz Game together! It\'s a fun and educational game about climate change. Join me by visiting the following link: [https://agricconnect.org/register]');
   }
 
-  // Add event listener to the invite button
   var inviteBtn = document.getElementById('invite-btn');
   inviteBtn.addEventListener('click', inviteFriends);
 
   function inviteFriends() {
-  // Replace '[insert game URL]' with the actual URL of your game
+
   var gameUrl = '[https://agricconnect.org/register]';
   
-  // Generate share links for WhatsApp, Facebook, LinkedIn, and Email
   var whatsappShareLink = 'https://api.whatsapp.com/send?text=Join me for the Climate Quiz Game! ' + encodeURIComponent(gameUrl);
   var facebookShareLink = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(gameUrl);
   var linkedinShareLink = 'https://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(gameUrl);
   var emailShareLink = 'mailto:?subject=Join me for the Climate Quiz Game!&body=Hey,%0D%0ALet\'s play the Climate Quiz Game together! It\'s a fun and educational game about climate change. Join me by visiting the following link:%0D%0A%0D%0A' + encodeURIComponent(gameUrl);
-  
-  // Open the share links in new windows or tabs
+
   window.open(whatsappShareLink, '_blank');
   window.open(facebookShareLink, '_blank');
   window.open(linkedinShareLink, '_blank');

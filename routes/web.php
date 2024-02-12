@@ -26,9 +26,6 @@ Route::get('/index', function () {
     return view('index');
 });
 
-Route::get('/detector/disease_ai', function () {
-    return view('detector/disease_ai');
-});
 
 Route::get('/game/end', [GameController::class, 'end'])->name('game.end');
 
@@ -48,7 +45,7 @@ Route::post('/redeem-tree/{topPlayerId}', [RedeemController::class, 'redeemTree'
 
 Route::get('/game/share-achievement', function () {
     $user = auth()->user();
-    $score = $user->score; 
+    $score = $user->score; // Assuming the user's score is stored in the 'score' attribute/column
 
     $users = User::orderByDesc('correct_answers')
         ->orderBy('wrong_answers')
@@ -63,6 +60,7 @@ Route::get('/game/share-achievement', function () {
 
 Route::get('/game/generate-certificate', [GameController::class, 'generateCertificate'])->name('game.generate-certificate');
 Route::get('/game/download-certificate', [GameController::class, 'downloadCertificate'])->name('game.download-certificate');
+
 
 //Forum
 Route::middleware(['auth'])->group(function () {
@@ -79,6 +77,13 @@ Route::middleware(['auth'])->group(function () {
     Route::delete('/forum/reply/{id}/destroy', [ForumController::class, 'destroyReply'])->name('forum.destroyReply');
     Route::delete('/forum/{id}/destroy', [ForumController::class, 'destroy'])->name('forum.destroy');
 });
+
+
+
+
+
+
+
 
 Route::middleware([
     'auth:sanctum',

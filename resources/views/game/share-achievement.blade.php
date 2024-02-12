@@ -9,7 +9,7 @@
     <title>Share Achievement</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="font-sans bg-gray-100">
+<body class="font-sans bg-gray-100" style="background-image: url('/img/4.jpeg'); background-size: cover;">
     <div class="max-w-screen-md mx-auto p-8 bg-white rounded-md shadow-md my-10">
         <!-- ... (existing certificate content) -->
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-cover bg-no-repeat bg-center font-sans text-white">
+<body class="bg-cover bg-no-repeat bg-center font-sans text-white" style="background-image: url('/img/5.jpeg');">
     <div class="flex justify-center items-center min-h-screen p-5">
         <div class="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 p-10 rounded-lg opacity-90 max-w-2xl w-full shadow-md">
             <h1 class="text-4xl font-bold mb-6 text-yellow-100">Climate Quiz Game</h1>
